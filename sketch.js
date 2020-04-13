@@ -17,7 +17,7 @@ function setup() {
   // noStroke();
   // text('train', 100, 200);
 
-  var points = font.textToPoints('Happy Birthday Sezal', 200, 600, 192, {
+  var points = font.textToPoints('Happy Birthday Sezal', 200, 600, 120, {
     sampleFactor: 0.25
   });
 
