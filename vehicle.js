@@ -5,7 +5,7 @@ class Vehicle {
     this.vel = p5.Vector.random2D();
     this.acc = createVector();
     this.r = 3;
-    this.maxspeed = 5;
+    this.maxspeed = 10;
     this.maxforce = 1;
   }
 
