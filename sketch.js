@@ -18,7 +18,7 @@ function setup() {
   // text('train', 100, 200);
 
   var points = font.textToPoints('Happy Birthday Sezal', 175, 600, 120, {
-    sampleFactor: 0.25
+    sampleFactor: 0.2
   });
 
   for (var i = 0; i < points.length; i++) {
