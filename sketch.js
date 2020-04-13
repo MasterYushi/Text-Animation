@@ -1,7 +1,4 @@
-// Daniel Shiffman
-// http://codingtra.in
-// Steering Text Paths
-// Video: https://www.youtube.com/watch?v=4hA7G3gup-4
+
 
 let font;
 let vehicles = [];
@@ -11,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  fullscreen();
+  fullscreen(true);
   createCanvas(600, 300);
   background(51);
   // textFont(font);
