@@ -9,7 +9,7 @@ function preload() {
 
 function setup() {
   fullscreen(true);
-  createCanvas(600, 300);
+  //createCanvas(600, 300);
   background(51);
   // textFont(font);
   // textSize(192);
