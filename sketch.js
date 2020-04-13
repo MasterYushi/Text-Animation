@@ -8,8 +8,8 @@ function preload() {
 }
 
 function setup() {
-  fullscreen(true);
-  //createCanvas(600, 300);
+ 
+  createCanvas(windowHeight, windowWidth);
   background(51);
   // textFont(font);
   // textSize(192);
