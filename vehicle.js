@@ -38,7 +38,7 @@ class Vehicle {
     l = random(0,255);
     push();
     colorMode(RGB);
-    stroke(color(h,s,l));
+    stroke(color(285,98,50));
     strokeWeight(this.r);
     point(this.pos.x, this.pos.y);
     pop();
