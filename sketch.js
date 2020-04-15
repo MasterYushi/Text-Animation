@@ -17,7 +17,7 @@ function setup() {
   // noStroke();
   // text('train', 100, 200);
 
-  var points = font.textToPoints('Shreyas karthik Veprey Ravichandran', 175, 350, 120, {
+  var points = font.textToPoints('Shreyas karthik Veprey Ravichandran', 175, 350, 100, {
     sampleFactor: 0.2
   });
 
