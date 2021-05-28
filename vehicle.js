@@ -1,12 +1,14 @@
 class Vehicle {
-  constructor(x, y) {
-    this.pos = createVector(random(width), random(height));
+  constructor(x, y, color = 'red') {
+    let xChoice = (random(2) >= 1) ? 0 : width;
+    this.pos = createVector(xChoice, random(height));
     this.target = createVector(x, y);
     this.vel = p5.Vector.random2D();
     this.acc = createVector();
     this.r = 5;
-    this.maxspeed = 15;
-    this.maxforce = 1;
+    this.maxSpeed = 10;
+    this.maxForce = .5;
+    this.color = color;
   }
 
   behaviors() {
@@ -32,13 +34,9 @@ class Vehicle {
   }
 
   show() {
-    var h,s,l;
-    h = random(0,255);
-    s = random(0,255);
-    l = random(0,255);
     push();
     colorMode(RGB);
-    stroke(color(h,s,l));
+    stroke(this.color);
     strokeWeight(this.r);
     point(this.pos.x, this.pos.y);
     pop();
@@ -48,13 +46,13 @@ class Vehicle {
   arrive(target) {
     var desired = p5.Vector.sub(target, this.pos);
     var d = desired.mag();
-    var speed = this.maxspeed;
+    var speed = this.maxSpeed;
     if (d < 100) {
-      speed = map(d, 0, 100, 0, this.maxspeed);
+      speed = map(d, 0, 100, 0, this.maxSpeed);
     }
     desired.setMag(speed);
     var steer = p5.Vector.sub(desired, this.vel);
-    steer.limit(this.maxforce);
+    steer.limit(this.maxForce);
     return steer;
   }
 
@@ -62,10 +60,10 @@ class Vehicle {
     var desired = p5.Vector.sub(target, this.pos);
     var d = desired.mag();
     if (d < 50) {
-      desired.setMag(this.maxspeed);
+      desired.setMag(this.maxSpeed);
       desired.mult(-1);
       var steer = p5.Vector.sub(desired, this.vel);
-      steer.limit(this.maxforce);
+      steer.limit(this.maxForce);
       return steer;
     } else {
       return createVector(0, 0);

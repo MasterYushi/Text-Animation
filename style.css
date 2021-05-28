@@ -1,7 +1,16 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
+
 canvas {
   display: block;
+}
+
+img.logo {
+  z-index: 1;
+  width: 75px;
+  position: absolute;
+  cursor: pointer;
 }
